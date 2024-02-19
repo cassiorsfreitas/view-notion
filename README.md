@@ -1,6 +1,6 @@
 # Tauri Tray Application (Next.js + Tauri + Tailwind)
 
-![Screenshot 2024-02-19 at 19 02 47](https://github.com/cassiorsfreitas/view-notion/assets/8185819/5ea54bf1-ccda-4177-9c92-2d6e63ad84fe)
+![Screenshot 2024-02-19 at 19 33 45](https://github.com/cassiorsfreitas/view-notion/assets/8185819/8ffddac9-5ccd-4fef-9b7c-b4ea7ec5b6bc)
 
 The developed code draws inspiration from the application crafted by [Diego Fernandes](https://github.com/diego3g) from [Rocketseat](https://youtu.be/lhkCa_v1buk?si=dSC1VQKfowLG54xp) YouTube Channel. It's vital to emphasize that all within this repository serves as a launching point for the community aspiring to shape a comparable application. Feel free to perform a clone/fork and evolve from this juncture.
 
