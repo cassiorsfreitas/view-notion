@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tauri Tray Application (Next.js + Tauri + Tailwind)
+
+![Screenshot 2024-02-19 at 19 02 47](https://github.com/cassiorsfreitas/view-notion/assets/8185819/5ea54bf1-ccda-4177-9c92-2d6e63ad84fe)
+
+The developed code draws inspiration from the application crafted by [Diego Fernandes](https://github.com/diego3g) from [Rocketseat](https://youtu.be/lhkCa_v1buk?si=dSC1VQKfowLG54xp) YouTube Channel. It's vital to emphasize that all within this repository serves as a launching point for the community aspiring to shape a comparable application. Feel free to perform a clone/fork and evolve from this juncture.
+
 
 ## Getting Started
 
-First, run the development server:
+This is a Tauri project template using Next.js and Tailwind CSS, bootstrapped by combining `create-next-app` and `create tauri-app`.
+
+### Prerequisites
+
+Make sure you have the following installed on your system:
+
+- [Rust](https://www.rust-lang.org/)
+- [Tauri CLI](https://tauri.app/v1/api/cli/)
+- [pnpm (optional but recommended)](https://pnpm.io/installation)
+
+### Installation
+
+1. Clone this repository to your local machine:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/cassiorsfreitas/view-notion.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install all NextJs dependencies 
+```bash
+cd view-notion
+pnpm install
+```
+3. Create an .env.local file and set these variables
+```.md
+NOTION_SECRET="secret_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+NOTION_DATABASE_ID="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usefull links
+- [window-vibrancy](https://github.com/tauri-apps/window-vibrancy)
+- [tauri-plugin-positioner](https://github.com/tauri-apps/tauri-plugin-positioner)
+- [Query a database](https://developers.notion.com/reference/post-database-query)
+- [@tauri-apss/api](https://tauri.app/v1/api/js/)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Roadmap
+- [x] Fetch data from Notion API
+- [ ] Emit event from Tauri in order to refetch the data when the window is opened
+- [ ] Add dynamic height behavior according to the requested content
+- [ ] Implement loading/fetching indicator
