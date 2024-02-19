@@ -38,6 +38,11 @@ NOTION_SECRET="secret_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 NOTION_DATABASE_ID="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 ```
 
+4. Running locally
+```bash
+pnpm tauri dev
+```
+
 ## Usefull links
 - [window-vibrancy](https://github.com/tauri-apps/window-vibrancy)
 - [tauri-plugin-positioner](https://github.com/tauri-apps/tauri-plugin-positioner)
