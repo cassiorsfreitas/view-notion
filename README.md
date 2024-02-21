@@ -1,6 +1,6 @@
 # Tauri Tray Application (Next.js + Tauri + Tailwind)
 
-The aim of this study project is to retrieve data from Notion (such as your tasks) and easily display them through a tray application.
+The goal of this study project is to fetch data from Notion, like tasks, and conveniently showcase them through a tray application. Additionally, it aims to gain practical understanding of how [Tauri](https://tauri.app/) operates!
 
 ![Screenshot 2024-02-19 at 19 33 45](https://github.com/cassiorsfreitas/view-notion/assets/8185819/8ffddac9-5ccd-4fef-9b7c-b4ea7ec5b6bc)
 
