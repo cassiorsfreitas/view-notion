@@ -44,6 +44,7 @@ pnpm tauri dev
 ```
 
 ## Usefull links
+- [Notion API](https://developers.notion.com/reference/retrieve-a-database)
 - [window-vibrancy](https://github.com/tauri-apps/window-vibrancy)
 - [tauri-plugin-positioner](https://github.com/tauri-apps/tauri-plugin-positioner)
 - [Query a database](https://developers.notion.com/reference/post-database-query)
