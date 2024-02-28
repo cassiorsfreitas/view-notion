@@ -1,8 +1,8 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "build": {
-    "beforeBuildCommand": "pnpm run build",
-    "beforeDevCommand": "pnpm run dev",
+    "beforeBuildCommand": "pnpm next-build",
+    "beforeDevCommand": "pnpm next-start",
     "devPath": "http://localhost:3000",
     "distDir": "../out"
   },
@@ -32,7 +32,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.cassiorsfreitas.dev",
       "longDescription": "",
       "macOS": {
         "entitlements": null,

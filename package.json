@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "next-start": "cross-env BROWSER=none next dev",
+    "next-build": "next build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
