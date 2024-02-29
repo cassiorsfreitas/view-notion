@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "next-start": "cross-env BROWSER=none next dev",
     "next-build": "next build",
-    "dev": "next dev",
+    "next-start": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -13,6 +12,7 @@
   "dependencies": {
     "@notionhq/client": "^2.2.14",
     "@tauri-apps/api": "1.5.3",
+    "date-fns": "^3.3.1",
     "lucide-react": "0.331.0",
     "next": "14.1.0",
     "react": "^18",

@@ -5,7 +5,7 @@ import Separator from "../components/Separator";
 import { emit } from "@tauri-apps/api/event";
 
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const MenuItem = dynamic(() => import("../components/MenuItem"), {
   ssr: false,
@@ -16,6 +16,16 @@ interface ItemsProps {
   name: string;
 }
 
+const HEIGHT_MAP: {
+  [key: number]: number;
+} = {
+  0: 172,
+  1: 179,
+  2: 202,
+  3: 225,
+  4: 248,
+};
+
 export default function Home() {
   const [items, setItems] = useState<ItemsProps[]>([]);
 
@@ -23,7 +33,8 @@ export default function Home() {
     const formattedData: ItemsProps[] = [];
     const response = await fetch("/api/notion");
     const data = await response.json();
-    console.log(data);
+    const { appWindow, LogicalSize } = await import("@tauri-apps/api/window");
+    await appWindow.setSize(new LogicalSize(280, HEIGHT_MAP[data.length]));
     data.forEach((item: any) => {
       formattedData.push({
         id: item.id,
@@ -44,18 +55,22 @@ export default function Home() {
         Tasks
       </div>
       <Separator />
-      <nav className="h-28 flex select-none flex-col px-1">
+      <nav className={`flex select-none flex-col px-1`}>
         <p className="mb-1 px-2 text-xs text-primary/30">Today</p>
-        {items
-          ? items.map((item) => (
-              <MenuItem key={item.id}>
-                <div className="flex items-center gap-1">
-                  <Square className="h-4 w-4 stroke-[1.5px]" />
-                  <div className="line-clamp-1">{item.name}</div>
-                </div>
-              </MenuItem>
-            ))
-          : "No items found in Notion"}
+        {items.length > 0 ? (
+          items.slice(0, 4).map((item) => (
+            <MenuItem key={item.id}>
+              <div className="flex items-center">
+                <Square className="h-4 w-4 min-h-4 min-w-4 stroke-[1.5px] mr-2" />
+                <div className="line-clamp-1 text-left">{item.name.trim()}</div>
+              </div>
+            </MenuItem>
+          ))
+        ) : (
+          <div className="text-center text-xs text-primary/30">
+            No items found in Notion
+          </div>
+        )}
       </nav>
       <Separator />
       <nav className="flex select-none flex-col px-1">
