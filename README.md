@@ -6,7 +6,6 @@ The goal of this study project is to fetch data from Notion, like tasks, and con
 
 The developed code draws inspiration from the application crafted by [Diego Fernandes](https://github.com/diego3g) from [Rocketseat](https://youtu.be/lhkCa_v1buk?si=dSC1VQKfowLG54xp) YouTube Channel. It's vital to emphasize that all within this repository serves as a launching point for the community aspiring to shape a comparable application. Feel free to perform a clone/fork and evolve from this juncture.
 
-
 ## Getting Started
 
 This is a Tauri project template using Next.js and Tailwind CSS, bootstrapped by combining `create-next-app` and `create tauri-app`.
@@ -27,23 +26,28 @@ Make sure you have the following installed on your system:
 git clone https://github.com/cassiorsfreitas/view-notion.git
 ```
 
-2. Install all NextJs dependencies 
+2. Install all NextJs dependencies
+
 ```bash
 cd view-notion
 pnpm install
 ```
+
 3. Create an .env.local file and set these variables
+
 ```.md
 NOTION_SECRET="secret_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 NOTION_DATABASE_ID="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 ```
 
 4. Running locally
+
 ```bash
 pnpm tauri dev
 ```
 
 ## Usefull links
+
 - [Notion API](https://developers.notion.com/reference/retrieve-a-database)
 - [window-vibrancy](https://github.com/tauri-apps/window-vibrancy)
 - [tauri-plugin-positioner](https://github.com/tauri-apps/tauri-plugin-positioner)
@@ -51,7 +55,8 @@ pnpm tauri dev
 - [@tauri-apss/api](https://tauri.app/v1/api/js/)
 
 ## Roadmap
+
 - [x] Fetch data from Notion API
+- [x] Add dynamic height behavior according to the requested content
 - [ ] Emit event from Tauri in order to refetch the data when the window is opened
-- [ ] Add dynamic height behavior according to the requested content
 - [ ] Implement loading/fetching indicator
